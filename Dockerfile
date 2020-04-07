@@ -15,7 +15,7 @@ lvm2 ntfs-3g genisoimage lshw hwinfo aoetools dmidecode lzop lzma xz-utils pixz 
 RUN echo "deb http://free.nchc.org.tw/debian/ jessie main" >> /etc/apt/sources.list \
     && echo "deb http://free.nchc.org.tw/drbl-core drbl stable" >> /etc/apt/sources.list \
     && wget -q http://drbl.nchc.org.tw/GPG-KEY-DRBL -O- | apt-key add - \
-    && mkdir -p /run/sendsigs.omit.d \
+    && mkdir -p /run/sendsigs.omit.d 
 RUN apt-get update \
     && apt-get -y install drbl clonezilla partclone ipxe lzop pigz pbzip2 udpcast \
        mkswap-uuid partclone drbl-chntpw mkpxeinitrd-net freedos \
