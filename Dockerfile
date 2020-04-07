@@ -4,7 +4,7 @@ MAINTAINER leejoneshane@gmail.com
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get --fix-missing update \
-    && apt-get -y --no-install-recommends install wget gnupg libnss3 \
+    && apt-get -y --no-install-recommends install wget gnupg libnss3 apt-utils locales \
     && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen \
     && locale-gen "en_US.UTF-8" \
     && dpkg-reconfigure locales \
